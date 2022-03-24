@@ -25,7 +25,7 @@ body {
   margin-bottom: 5vh;
   display: flex;
   width: 100%;
-  min-height: 75vh;
+  min-height: 90vh;
   background: url(../images/background_upscaled.jpg) no-repeat;
   background-position: center;
   background-size: cover;

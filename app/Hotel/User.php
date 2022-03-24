@@ -18,7 +18,7 @@ class User extends BaseService
           ':email' => $email,
       ];
       return $this->fetch('SELECT * FROM user WHERE email = :email', parameters);
-    } 
+    }
 
     public function getList()
     {
@@ -35,7 +35,7 @@ class User extends BaseService
         $parameters = [
             ':name' => $name,
             ':email' => $email,
-            ':password' => $password,
+            ':password' => $passwordHash,
         ];
 
         $rows = $this->execute('INSERT INTO user(name, email, password) VALUES (:name, :email ,:password)', $parameters);
@@ -47,7 +47,7 @@ class User extends BaseService
     {
         // Retrieve User
         $user = $this->getByEmail($email);
-        
+
         // Verify User Password
         return password_verify($password, $user['password']);
     }

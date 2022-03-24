@@ -28,8 +28,9 @@
         return;
     }
 
-    // Set Room to favorite
-    $favorite = new Favorite();
+    // Add review
+    $review = new Review();
+    $review->insert($roomId, User::getCurrentUserId(), $_REQUEST['rate'], $_REQUEST['comment']);
 
 
     // Add or remove something from favorite

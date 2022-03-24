@@ -22,7 +22,7 @@ class BaseService
             return;
         }
 
-        //Load Database Configuration 
+        //Load Database Configuration
         $config = Configuration::getInstance();
         $databaseConfig = $config->getConfig()['database'];
 
@@ -39,13 +39,9 @@ class BaseService
          // Prepare Statement
          $statement = $this->getPdo()->prepare($sql);
 
-         // Bind parameters
-        foreach ($parameters as $key => $value) {
-            $statement->bindParam($key, $value, is_int($value) ? PDO::PARAM_INT : PDO::PARAM_STR);
-        }
-
         // Execute
-        if (!$statement->execute()) {
+        $status = $statement->execute($parameters);
+        if (!$status) {
             throw new Exception($statement->errorInfo()[2]);
         }
 
@@ -57,13 +53,7 @@ class BaseService
         // Prepare Statement
         $statement = $this->getPdo()->prepare($sql);
 
-        // Bind parameters
-        foreach ($parameters as $key => $value) {
-            $statement->bindParam($key, $value, is_int($value) ? PDO::PARAM_INT : PDO::PARAM_STR);
-        }
-
-        // Execute
-        $status = $statement->execute();
+        $status = $statement->execute($parameters);
         if (!$status) {
             throw new Exception($statement->errorInfo()[2]);
         }
@@ -77,13 +67,8 @@ class BaseService
         // Prepare Statement
         $statement = $this->getPdo()->prepare($sql);
 
-        // Bind parameters
-        foreach ($parameters as $key => $value) {
-            $statement->bindParam($key, $value, is_int($value) ? PDO::PARAM_INT : PDO::PARAM_STR);
-        }
-
         // Execute
-        $status = $statement->execute();
+        $status = $statement->execute($parameters);
         if (!$status) {
             throw new Exception($statement->errorInfo()[2]);
         }

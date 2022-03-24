@@ -1,3 +1,10 @@
+
+<?php
+    require __DIR__.'/../boot/boot.php';
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +23,7 @@
 
     <!--========== CSS Stylesheets ===========-->
     <link rel="stylesheet" href="assets/css/header_footer.css">
-    <link rel="stylesheet" href="assets/css/signin.css">
+    <link rel="stylesheet" href="assets/css/login.css">
 
     <!-- =========== Title ============= -->
     <title>Hotel-Login</title>
@@ -32,7 +39,7 @@
 
     <div id="content">
         <div class="container">
-            <form id="form" action="/user.php" method="post">
+            <form id="form" action="actions/login.php" method="post">
                 <h1>Sign In</h1>
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="email@gmail.com"

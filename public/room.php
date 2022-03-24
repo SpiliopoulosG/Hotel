@@ -5,6 +5,7 @@
     use Hotel\Room;
     use Hotel\Favorite;
     use Hotel\User;
+    use Hotel\Review;
 
     // Room Service
     $room = new Room();
@@ -13,18 +14,27 @@
     $roomId = $_REQUEST['room_id'];
     if (empty($roomId)) {
         header('Location: index.php');
+
+        return;
     }
 
     //Load Room Info
-    $roomInfo = $room->get($roomId); 
+    $roomInfo = $room->get($roomId);
     if (empty($roomInfo)) {
         header('Location: index.php');
+
+        return;
     }
 
     $userId = User::getCurrentUserId();
 
     // Check if room is favorite for current user
     $isFavorite = $favorite->isFavorite($roomId, $userId);
+
+    // Load all room Reviews
+    $review = new Review();
+    $allReviews = $review->getReviewsByRoom($roomId);
+
 ?>
 
 
@@ -71,7 +81,7 @@
                     <?php
                         $roomAvgReview = $roomInfo['avg_reviews'];
                         for ($i = 1; $i <= 5; $i++){
-                            if ($roomAvgReview > $i) {
+                            if ($roomAvgReview >= $i) {
                                 ?> <i class="fas fa-star"></i> <?php
                             } else {
                                 ?> <i class="far fa-star"></i> <?php
@@ -90,6 +100,31 @@
             <div class="img-frame fill">
                 <img src="assets/images/images/rooms/<?php echo $roomInfo['photo_url'] ?>" alt="">
             </div>
+            <div class="caption">
+              <?php
+              foreach ($allReviews as $review) {
+                ?>  <div class="room-reviews">
+                      <h4><span>1. <?php echo $review['user_name']; ?></span>
+                        <div class="div-reviews">
+                          <?php
+                              for ($i = 1; $i <= 5; $i++){
+                                  if ($review['rate'] >= $i) {
+                                      ?> <i class="fas fa-star"></i> <?php
+                                  } else {
+                                      ?> <i class="far fa-star"></i> <?php
+                                  }
+                              }
+                          ?>
+                        </div>
+                      </h4>
+                      <h5>Created at: <?php echo $review['created_time']; ?></h5>
+                      <p><?php echo $review['comment']; ?></p>
+                </div>  <?php
+              }
+               ?>
+
+            </div>
+
         </div>
     </div>
 
