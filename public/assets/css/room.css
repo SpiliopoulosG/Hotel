@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#content{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: flex;
+    width: 100%;
+    min-height: 90vh;
+    background: url(../images/background_upscaled.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+}
+
+.container .title{
+    font-size: 2rem;
+    color: #F473B9;
+    margin:1rem;
+    height: 5vh;
+}
+
+.container{
+    position: relative;
+    margin-top: 4rem;
+    display: flex;
+    height: auto;
+    width: 80%;
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    flex-direction: column;
+  }
+
+.container .rev-cost{
+    font-size: 1.5rem;
+    color: #F473B9;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.container .reviews{
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.container .cost{
+    margin: 0 1rem;
+}
+
+.container .img-frame{
+    height: auto;
+    width: auto;
+  }
+  
+  .container .fill {
+    position: relative;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+  }
+  
+  .container .fill img {
+    min-width: 100%;
+    min-height: 100%
+  }
+  

@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url(../images/background_upscaled.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.container {
+  margin: 2rem;
+  position: relative;
+  display: flex;
+  height: auto;
+  width: 80%;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  align-items: center;
+  flex-direction: column;
+}
+
+.first{
+  margin: 5rem 2rem 0;
+}
+
+.last {
+  margin: 2rem 2rem 5rem;
+}
+
+.container h1{
+  color: #F473B9;
+  font-size: 1.5rem;
+  padding: 0.2rem;
+  margin: 0.2rem;
+}
+
+form{
+  margin: 2rem;
+  position: relative;
+  display: flex;
+  height: auto;
+  width: 80%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.parameterField {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.formField {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+}
+
+.select {
+  height: 50px;
+  width: 100%;
+  padding: 5px auto;
+  margin: 5px auto;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: #F473B9;
+  background-color: #fff;
+}
+
+
+.parameterField input {
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: #F473B9;
+}
+
+.search-box {
+  background-color: #F473B9;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding: 0px 5px 0 5px;
+  border-radius: 30px;
+  margin: 10px 0;
+}
+
+.search-box .search-btn {
+  width: 100px;
+  height: 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  background-color: #F473B9;
+  border: none;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+
+.search-box:hover .search-btn {
+  background-color: #fff;
+  color: #F473B9;
+  transition: 0.5s;
+}
+
+label {
+  font-size: 1rem;
+  color: #F473B9;
+}
+
+.room{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 20vh;
+  flex-direction: column;
+}
+
+.room .firstLine{
+  display: flex;
+  flex-direction: row;
+  height: 150px;
+}
+
+.room .img-frame{
+  height: 125px;
+  width: 125px;
+}
+
+.room .fill {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
+}
+
+.room .fill img {
+  min-width: 100%;
+  min-height: 100%
+}
+
+.room .title{
+  margin: 0 10px;
+  top: 10px;
+  position: relative;
+  height: 125px;
+  display: flex;
+  width: 75%;
+  flex-direction: column;
+}
+
+.room .title h3 {
+  color: #F473B9;
+  font-size: 1.5rem;
+  padding: 0 0.2rem;
+  margin: 0 0.2rem;
+}
+
+.room .title h6{
+  font-size: 1.2rem;
+  padding: 0 0.2rem;
+  margin: 0 0.2rem;
+  color: #F473B9;
+}
+
+.room .title p{
+  color: #323232;
+  font-size: 1rem;
+  padding: 0 0.2rem;
+  margin: 1rem 0.2rem;
+}
+
+.room .secondLine{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.room .secondLine h6 {
+  color: #F473B9;
+  font-size: 0.9rem;
+  padding: 0 0.5rem;
+  margin: 0 0.2rem;
+}
+
+.room .secondLine a {
+  position: relative;
+  display: flex;
+  left: 1rem;
+}
+
+.room .secondLine a:hover{
+  color: #F473B9;
+
+}
+
+hr {
+  border-block-color:  #F473B9;
+  width: 80%;
+  position: relative;
+  left: 10%;
+  margin: 5px;
+}
+
+@media only screen and (max-width: 850px) {
+  .parameterField {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+
+    height: auto;
+    width: 100%;
+
+  }
+  .formField{
+    margin: 1px;
+    padding: 1px;
+  }
+}

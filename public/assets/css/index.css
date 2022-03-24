@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#content {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: url(../images/background_upscaled.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  height: 50vh;
+  width: 400px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  align-items: center;
+  justify-content: center;
+}
+
+.search-banner-text{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.formField {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.select {
+  height: 50px;
+  width: 320px;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: #F473B9;
+  background-color: #fff;
+}
+
+.search-box {
+  background-color: #F473B9;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  padding: 0px 5px 0 5px;
+  border-radius: 30px;
+}
+
+.search-box .search-btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 30px;
+  font-size: 1rem;
+  background-color: #F473B9;
+  border: none;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.search-box .search-btn:hover {
+  background-color: #fff;
+  color: #F473B9;
+  transition: 0.5s;
+}
+
+label {
+  font-size: 1rem;
+  color: #F473B9;
+}
+
+input {
+  height: 50px;
+  width: 320px;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: #F473B9;
+}
+
+@media only screen and (max-width: 400px) {
+  .select {
+    width: 200px;
+  }
+
+  .selectRow {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    width: 250px;
+  }
+
+  .select {
+    padding: 5px;
+    margin: 5px;
+  }
+
+  input {
+    width: 200px;
+  }
+}

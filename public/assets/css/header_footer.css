@@ -1,0 +1,105 @@
+
+a{
+    text-decoration: none;
+    color: #fff
+}
+
+a:hover{
+    text-decoration: none;
+    color: #eee;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 100%;
+    min-height: 7.5vh;
+    background: #F473B9;
+    justify-content: center;
+    z-index: 1;
+}
+
+#mylogo{    
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px 50px;
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+
+#my-nav-menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px 50px;
+    margin-top: 1.8rem;
+    display: flex;
+    flex-direction: row;
+}
+
+#my-nav-menu a{
+    display: flex;
+    flex-direction: row;
+    letter-spacing: 1px;
+    font-size: 0.7rem;
+}
+
+#my-nav-menu a i,
+#my-nav-menu a h2{
+    font-size: 1.5rem;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 0;
+    display: flex;
+    width: 100%;
+    min-height: 7.5vh;
+    background: #F473B9;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+footer #social{
+    display: flex;
+    flex-direction: row;
+    letter-spacing: 1px;
+    margin: 5px 10px;
+    margin-top: 10px;;
+}
+
+footer #social a{
+    margin: 0 10px;
+    font-size: 1rem;
+}
+
+footer p{
+    color: #fff;
+    margin: 5px 0;
+}
+
+@media only screen and (max-width: 350px) {
+    #mylogo{
+        margin: 15px 10px;
+        font-size: 0.8rem;
+    }
+    #my-nav-menu a{
+        display: flex;
+        flex-direction: row;
+        letter-spacing: 1px;
+        font-size: 0.5rem;
+    }
+    #my-nav-menu a i,
+    #my-nav-menu a h2
+    {
+        font-size: 1.2rem;
+    }
+    #my-nav-menu{
+        margin: 10px 10px;
+        margin-top: 1.5rem;
+    }
+  }
